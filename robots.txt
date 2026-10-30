@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cassiowinkler.com.br/sitemap.xml
