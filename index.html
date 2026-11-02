@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#080e19">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Cássio Winkler é especialista em Tecnologia da Informação e consultor em sistemas corporativos, TOTVS Protheus e RM, SQL, BI, desenvolvimento de software e transformação digital. Atendimento remoto e presencial em Guarapuava, PR.">
+  <meta name="description" content="Cássio Winkler, consultoria em Tecnologia da Informação, sistemas corporativos TOTVS Protheus e RM, SQL, BI e desenvolvimento de software. Atendimento presencial em Guarapuava e região, no Paraná, e remoto para empresas de todo o Brasil.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Cássio Winkler">
-  <meta name="keywords" content="Cássio Winkler, consultoria de TI, consultor de tecnologia, TOTVS Protheus, TOTVS RM, ADVPL, SQL, BI, desenvolvimento de software, análise de negócios, Guarapuava">
+  <meta name="keywords" content="Cássio Winkler, consultoria de TI em Guarapuava, consultor de TI no Paraná, consultoria TOTVS Protheus, consultoria TOTVS RM, ADVPL, SQL, Business Intelligence, desenvolvimento de sistemas, análise de negócios, tecnologia empresarial, atendimento remoto Brasil">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Cássio Winkler | Tecnologia e Negócios">
   <meta property="og:title" content="Cássio Winkler | Consultoria em Tecnologia e Soluções Digitais">
-  <meta property="og:description" content="Tecnologia com visão de negócio. Consultoria em TI, sistemas corporativos, TOTVS, dados e desenvolvimento de soluções.">
+  <meta property="og:description" content="Consultoria em Tecnologia da Informação, sistemas corporativos, TOTVS, dados e desenvolvimento. Atendimento em Guarapuava e região, no Paraná, e remoto em todo o Brasil.">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Cássio Winkler | Tecnologia e Negócios">
-  <meta name="twitter:description" content="Consultoria em tecnologia, sistemas corporativos, dados e transformação digital.">
+  <meta name="twitter:description" content="Consultoria em tecnologia, sistemas corporativos, dados e transformação digital. Guarapuava, Paraná, e atendimento remoto em todo o Brasil.">
 
   <title>Cássio Winkler | Consultoria em Tecnologia, Sistemas e Negócios</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2365aaff'/%3E%3Cstop offset='1' stop-color='%2355e0d0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230b1728'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='url(%23g)'%3ECW%3C/text%3E%3C/svg%3E">
@@ -28,10 +28,10 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Cássio Winkler",
-    "jobTitle": "Especialista em Tecnologia da Informação e Consultor de TI",
-    "description": "Atuação em sistemas corporativos, ERP TOTVS RM e Protheus, análise de negócios, SQL, BI, desenvolvimento de software e transformação digital.",
+    "jobTitle": "Especialista em Tecnologia da Informação e Consultor de Tecnologia e Negócios",
+    "description": "Consultoria em Tecnologia da Informação, sistemas corporativos ERP TOTVS RM e Protheus, análise de negócios, SQL, BI, desenvolvimento de software e transformação digital. Atendimento presencial em Guarapuava e região, no Paraná, e remoto em todo o Brasil.",
     "email": "mailto:winklercassio@gmail.com",
-    "url": "https://www.linkedin.com/in/cassiowinklerti/",
+    "url": "https://cassiowinkler.com.br/",
     "sameAs": [
       "https://www.linkedin.com/in/cassiowinklerti/"
     ],
@@ -44,6 +44,7 @@
     "areaServed": [
       { "@type": "City", "name": "Guarapuava" },
       { "@type": "AdministrativeArea", "name": "Paraná" },
+      { "@type": "AdministrativeArea", "name": "Centro-Sul do Paraná" },
       { "@type": "Country", "name": "Brasil" }
     ],
     "knowsAbout": [
@@ -236,6 +237,15 @@
     .expertise { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 44px; align-items: start; }
     .tech-wrap { display: flex; flex-wrap: wrap; gap: 9px; }
     .tech-wrap .tag { font-size: 12px; padding: 9px 13px; color: #d7e5f7; }
+    .projects-panel {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px;
+      align-items: center; padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(18,32,52,.88), rgba(12,21,35,.82));
+    }
+    .projects-panel p { color: var(--muted); margin: 0; max-width: 720px; }
+    .projects-panel h3 { margin: 8px 0 10px; font-size: 20px; }
+    .projects-panel .btn { flex-shrink: 0; }
     .callout {
       border-radius: 25px; padding: clamp(24px, 4vw, 38px);
       background: linear-gradient(115deg, rgba(37,91,145,.32), rgba(23,116,113,.19));
@@ -344,6 +354,8 @@
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#especialidades">Especialidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#publicacoes">Publicações</a>
         <a href="#disponibilidade">Disponibilidade</a>
         <a href="#contato">Contato</a>
       </div>
@@ -358,12 +370,12 @@
         <div>
           <div class="eyebrow">Consultoria, sistemas e inovação</div>
           <h1>Seu parceiro estratégico em <span class="gradient-text">soluções tecnológicas.</span></h1>
-          <p class="hero-copy">Conecto tecnologia, processos e objetivos de negócio para transformar desafios em soluções eficientes — de sistemas corporativos e dados ao desenvolvimento de software.</p>
+          <p class="hero-copy">Conecto tecnologia, processos e objetivos de negócio para transformar desafios empresariais em soluções eficientes, de sistemas corporativos e gestão de dados ao desenvolvimento de software. Atendo empresas em Guarapuava e região, no Paraná, e projetos remotos em todo o Brasil.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:winklercassio@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20consultoria">Vamos conversar <span aria-hidden="true">↗</span></a>
             <a class="btn btn-secondary" href="#servicos">Conheça meus serviços</a>
           </div>
-          <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> Atendimento remoto ou presencial em Guarapuava, PR</div>
+          <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> Atendimento presencial em Guarapuava e região, no Paraná, e remoto para empresas de todo o Brasil.</div>
         </div>
 
         <aside class="visual-card" aria-label="Apresentação profissional de Cássio Winkler">
@@ -388,9 +400,9 @@
 
         <div class="about-grid">
           <div class="panel">
-            <p>Especialista em Tecnologia da Informação, com sólida atuação em projetos estratégicos, sustentação de sistemas e transformação digital. Experiência com ERP TOTVS (RM e Protheus), análise de negócios e gestão de projetos de TI.</p>
+            <p>Especialista em Tecnologia da Informação, com sólida atuação em projetos estratégicos, sustentação de sistemas e transformação digital. Experiência com ERP TOTVS (RM e Protheus), análise de negócios e gestão de projetos de TI, conectando as necessidades das áreas empresariais às soluções tecnológicas.</p>
             <br>
-            <p>Atuação em levantamento de requisitos, implantação de soluções corporativas e integração entre áreas de negócio e tecnologia, além de conhecimentos em SQL, BI, ADVPL e melhoria contínua de processos. Perfil analítico, com visão estratégica e técnica, capacidade de liderança e foco na eficiência operacional, na otimização de processos e na inovação tecnológica.</p>
+            <p>Atuação em levantamento de requisitos, implantação de soluções corporativas e integração entre áreas de negócio e tecnologia, além de conhecimentos em SQL, BI, ADVPL e melhoria contínua de processos. Perfil analítico, com visão estratégica e técnica, capacidade de liderança e foco na eficiência operacional, na otimização de processos e na inovação tecnológica. A experiência abrange o entendimento do cenário, a análise das necessidades, a definição de alternativas e o acompanhamento da evolução das soluções.</p>
           </div>
 
           <div class="panel focus-list">
@@ -478,6 +490,42 @@
       </div>
     </section>
 
+    <section id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Projetos e experiências</div>
+          <h2 id="projetos-titulo">Experiência aplicada a desafios reais.</h2>
+          <p>Conheça projetos e iniciativas que demonstram minha atuação em tecnologia, sistemas, processos e transformação digital.</p>
+        </div>
+        <div class="projects-panel">
+          <div>
+            <div class="section-kicker">Portfólio profissional</div>
+            <h3>Projetos apresentados no LinkedIn</h3>
+            <p>Reuni no LinkedIn projetos e experiências profissionais que complementam minha apresentação. Acesse para conhecer melhor as iniciativas, os contextos e as soluções que fazem parte da minha trajetória.</p>
+          </div>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/cassiowinklerti/details/projects/" target="_blank" rel="noopener noreferrer">Conheça meus projetos <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicacoes" aria-labelledby="publicacoes-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Artigos e publicações</div>
+          <h2 id="publicacoes-titulo">Ideias, conhecimento e experiências compartilhadas.</h2>
+          <p>Publico conteúdos sobre tecnologia, sistemas corporativos, TOTVS, dados, desenvolvimento e gestão, com foco em compartilhar conhecimento e discutir desafios do ambiente empresarial.</p>
+        </div>
+        <div class="projects-panel">
+          <div>
+            <div class="section-kicker">Conteúdo profissional</div>
+            <h3>Acompanhe minhas publicações no LinkedIn</h3>
+            <p>Confira artigos, análises e conteúdos técnicos sobre tecnologia e negócios. Um espaço para acompanhar ideias, aprendizados e perspectivas sobre a evolução dos ambientes empresariais.</p>
+          </div>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/cassiowinklerti/recent-activity/all/" target="_blank" rel="noopener noreferrer">Ver publicações <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
     <section aria-label="Convite para contato">
       <div class="container">
         <div class="callout">
@@ -496,11 +544,11 @@
         <div class="section-head">
           <div class="section-kicker">Disponibilidade</div>
           <h2 id="disponibilidade-titulo">Modalidades de atendimento.</h2>
-          <p>Atuação remota ou presencial, conforme as necessidades do projeto.</p>
+          <p>Atuação presencial em Guarapuava e região, no Paraná, e atendimento remoto para empresas de todo o Brasil, conforme o escopo e as necessidades de cada projeto.</p>
         </div>
         <div class="availability-grid">
-          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌘</div><div><strong>Atendimento remoto</strong><span>Projetos e consultoria a distância.</span></div></div>
-          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌖</div><div><strong>Atendimento presencial</strong><span>Guarapuava, Paraná.</span></div></div>
+          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌘</div><div><strong>Atendimento remoto em todo o Brasil</strong><span>Consultoria, desenvolvimento e acompanhamento de projetos a distância para empresas de diferentes regiões.</span></div></div>
+          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌖</div><div><strong>Atendimento presencial em Guarapuava e região</strong><span>Atuação local no Paraná, conforme a necessidade e o escopo do projeto.</span></div></div>
         </div>
       </div>
     </section>
@@ -531,7 +579,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year">2026</span> Cássio Winkler. Todos os direitos reservados.</span>
-      <span>Tecnologia, negócios e inovação · Guarapuava, PR</span>
+      <span>Tecnologia, negócios e inovação · Guarapuava e região, Paraná · Atendimento remoto em todo o Brasil</span>
     </div>
   </footer>
 
