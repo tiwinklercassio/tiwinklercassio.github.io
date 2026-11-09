@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080e19">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Cássio Winkler, consultoria em Tecnologia da Informação, sistemas corporativos TOTVS Protheus e RM, SQL, BI e desenvolvimento de software. Atendimento presencial em Guarapuava e região, no Paraná, e remoto para empresas de todo o Brasil.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Cássio Winkler">
+  <meta name="keywords" content="Cássio Winkler, consultoria de TI em Guarapuava, consultor de TI no Paraná, consultoria TOTVS Protheus, consultoria TOTVS RM, ADVPL, SQL, Business Intelligence, desenvolvimento de sistemas, análise de negócios, tecnologia empresarial, atendimento remoto Brasil">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Cássio Winkler | Tecnologia e Negócios">
+  <meta property="og:title" content="Cássio Winkler | Consultoria em Tecnologia e Soluções Digitais">
+  <meta property="og:description" content="Consultoria em Tecnologia da Informação, sistemas corporativos, TOTVS, dados e desenvolvimento. Atendimento em Guarapuava e região, no Paraná, e remoto em todo o Brasil.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cássio Winkler | Tecnologia e Negócios">
+  <meta name="twitter:description" content="Consultoria em tecnologia, sistemas corporativos, dados e transformação digital. Guarapuava, Paraná, e atendimento remoto em todo o Brasil.">
+
+  <title>Cássio Winkler | Consultoria em Tecnologia, Sistemas e Negócios</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2365aaff'/%3E%3Cstop offset='1' stop-color='%2355e0d0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230b1728'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='url(%23g)'%3ECW%3C/text%3E%3C/svg%3E">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cássio Winkler",
+    "jobTitle": "Especialista em Tecnologia da Informação e Consultor de Tecnologia e Negócios",
+    "description": "Consultoria em Tecnologia da Informação, sistemas corporativos ERP TOTVS RM e Protheus, análise de negócios, SQL, BI, desenvolvimento de software e transformação digital. Atendimento presencial em Guarapuava e região, no Paraná, e remoto em todo o Brasil.",
+    "email": "mailto:winklercassio@gmail.com",
+    "url": "https://cassiowinkler.com.br/",
+    "sameAs": [
+      "https://www.linkedin.com/in/cassiowinklerti/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guarapuava",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Guarapuava" },
+      { "@type": "AdministrativeArea", "name": "Paraná" },
+      { "@type": "AdministrativeArea", "name": "Centro-Sul do Paraná" },
+      { "@type": "Country", "name": "Brasil" }
+    ],
+    "knowsAbout": [
+      "Tecnologia da Informação",
+      "TOTVS Protheus",
+      "TOTVS RM",
+      "ADVPL",
+      "SQL",
+      "Business Intelligence",
+      "Análise de negócios",
+      "Gestão de projetos de TI",
+      "Desenvolvimento de software",
+      "Transformação digital"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080e19;
+      --panel: rgba(17, 29, 48, .78);
+      --text: #eef4ff;
+      --muted: #a5b4ca;
+      --line: rgba(163, 184, 214, .16);
+      --blue: #63a8ff;
+      --cyan: #55e0d0;
+      --accent: linear-gradient(110deg, #65aaff, #55e0d0);
+      --radius: 22px;
+      --max: 1120px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+      --header-height: 74px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    /* Base responsiva: evita que conteúdo interno force a largura dos componentes. */
+    html, body { width: 100%; max-width: 100%; }
+    body { overflow-x: hidden; }
+    main, section, header, footer, nav, .container,
+    .hero-grid, .about-grid, .expertise, .projects-panel,
+    .contact-panel, .services-grid, .availability-grid {
+      min-width: 0;
+    }
+    p, h1, h2, h3, a, span, strong, small {
+      overflow-wrap: break-word;
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 18px); }
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 85% -5%, rgba(43,119,206,.20), transparent 65%),
+        radial-gradient(700px 480px at -10% 35%, rgba(38,197,180,.10), transparent 60%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img, svg { max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .skip-link {
+      position: fixed; left: 12px; top: 12px; z-index: 100;
+      padding: 10px 14px; border-radius: 10px; color: #07121f;
+      background: var(--cyan); transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(8, 14, 25, .88);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      min-height: var(--header-height);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 750; letter-spacing: -.03em; }
+    .brand-mark {
+      width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 38px;
+      border-radius: 12px; background: var(--accent); color: #07121f;
+      font-weight: 900; font-size: 15px; box-shadow: 0 8px 24px rgba(85,174,238,.22);
+    }
+    .brand small {
+      display: block; color: var(--muted); font-size: 10px;
+      letter-spacing: .12em; text-transform: uppercase; font-weight: 650;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: clamp(14px, 2.5vw, 26px);
+      color: var(--muted); font-size: 13px; font-weight: 650;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta, .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 44px; border-radius: 999px; padding: 11px 19px;
+      font-weight: 750; font-size: 13px; text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .nav-cta, .btn-primary {
+      color: #07121f; background: var(--accent);
+      box-shadow: 0 10px 28px rgba(76,171,220,.18);
+    }
+    .nav-cta:hover, .btn:hover {
+      transform: translateY(-2px); box-shadow: 0 14px 32px rgba(76,171,220,.25);
+    }
+    .btn-secondary { border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,.035); }
+    .menu-btn {
+      display: none; min-width: 44px; min-height: 44px;
+      border: 1px solid var(--line); color: var(--text);
+      background: var(--panel); border-radius: 12px; font-size: 19px; cursor: pointer;
+    }
+
+    .hero { padding: clamp(66px, 9vw, 104px) 0 clamp(58px, 8vw, 88px); overflow: clip; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(270px, .72fr); gap: clamp(28px, 6vw, 70px); align-items: center; }
+    .eyebrow {
+      color: var(--cyan); font-size: 11px; letter-spacing: .19em;
+      text-transform: uppercase; font-weight: 800; display: flex; align-items: center; gap: 10px;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; flex: 0 0 28px; background: var(--cyan); }
+    h1 {
+      font-size: clamp(2.55rem, 6vw, 4.4rem); line-height: 1.04;
+      letter-spacing: -.055em; margin: 20px 0 22px; max-width: 760px;
+      overflow-wrap: break-word;
+    }
+    .gradient-text {
+      background: var(--accent); -webkit-background-clip: text;
+      background-clip: text; color: transparent;
+    }
+    .hero-copy { color: var(--muted); font-size: clamp(15px, 1.5vw, 17px); max-width: 660px; margin: 0 0 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { margin-top: 30px; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; }
+    .status-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgba(85,224,208,.10); }
+    .visual-card {
+      min-width: 0; border: 1px solid rgba(132,174,224,.22); border-radius: 28px; padding: 27px;
+      background: linear-gradient(145deg, rgba(23,43,69,.92), rgba(12,22,37,.86));
+      box-shadow: var(--shadow); position: relative; isolation: isolate;
+    }
+    .visual-card::before {
+      content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
+      background: linear-gradient(140deg, rgba(99,168,255,.45), transparent 45%, rgba(85,224,208,.28));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; z-index: -1;
+    }
+    .visual-top { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .13em; }
+    .monogram {
+      min-height: 150px; display: grid; place-items: center; margin: 20px 0;
+      border-radius: 20px;
+      background: radial-gradient(circle at 50% 40%, rgba(99,168,255,.22), transparent 58%), rgba(5,13,24,.4);
+    }
+    .monogram span {
+      font-size: clamp(4rem, 8vw, 4.75rem); line-height: 1; font-weight: 850;
+      letter-spacing: -.09em; background: var(--accent);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .visual-card h2 { font-size: 20px; margin: 0 0 4px; letter-spacing: -.03em; }
+    .visual-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .mini-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+    .mini-tags span, .tag {
+      padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px;
+      color: #c6d5e9; font-size: 10px; font-weight: 700; background: rgba(255,255,255,.025);
+    }
+
+    section { padding: clamp(60px, 8vw, 84px) 0; }
+    .section-head { max-width: 690px; margin-bottom: 38px; }
+    .section-kicker { color: var(--cyan); text-transform: uppercase; letter-spacing: .17em; font-size: 10px; font-weight: 850; }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.75rem); letter-spacing: -.045em; line-height: 1.12; margin: 12px 0 14px; }
+    .section-head p, .body-copy { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .panel { min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 28px; }
+    .panel p { color: var(--muted); margin: 0; }
+    .focus-list { display: grid; gap: 15px; }
+    .focus-item { display: flex; gap: 13px; align-items: flex-start; }
+    .focus-icon {
+      flex: 0 0 35px; height: 35px; display: grid; place-items: center;
+      border-radius: 11px; color: var(--cyan); background: rgba(85,224,208,.09); font-size: 16px;
+    }
+    .focus-item strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .focus-item span { color: var(--muted); font-size: 12px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .service {
+      min-width: 0; min-height: 190px; padding: 23px; border: 1px solid var(--line);
+      border-radius: 18px; background: linear-gradient(145deg, rgba(18,32,52,.88), rgba(12,21,35,.82));
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .service:hover { transform: translateY(-4px); border-color: rgba(99,168,255,.42); }
+    .service-icon {
+      width: 40px; height: 40px; display: grid; place-items: center;
+      border-radius: 13px; background: rgba(99,168,255,.10);
+      color: var(--blue); font-size: 18px; margin-bottom: 17px;
+    }
+    .service h3 { font-size: 15px; margin: 0 0 7px; letter-spacing: -.02em; }
+    .service p { font-size: 12px; line-height: 1.65; color: var(--muted); margin: 0; }
+    .expertise { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 44px; align-items: start; }
+    .tech-wrap { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tech-wrap .tag { font-size: 12px; padding: 9px 13px; color: #d7e5f7; }
+    .projects-panel {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px;
+      align-items: center; padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(18,32,52,.88), rgba(12,21,35,.82));
+    }
+    .projects-panel p { color: var(--muted); margin: 0; max-width: 720px; }
+    .projects-panel h3 { margin: 8px 0 10px; font-size: 20px; }
+    .projects-panel .btn { flex-shrink: 0; }
+    .callout {
+      border-radius: 25px; padding: clamp(24px, 4vw, 38px);
+      background: linear-gradient(115deg, rgba(37,91,145,.32), rgba(23,116,113,.19));
+      border: 1px solid rgba(99,168,255,.2);
+      display: flex; justify-content: space-between; align-items: center; gap: 30px;
+    }
+    .callout h2 { max-width: 650px; margin-top: 0; }
+    .callout p { color: var(--muted); margin: 0; max-width: 620px; }
+    .availability-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .availability-card {
+      display: flex; gap: 16px; align-items: center; min-width: 0;
+      padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel);
+    }
+    .availability-card .service-icon { margin: 0; flex: 0 0 44px; width: 44px; height: 44px; }
+    .availability-card strong { display: block; font-size: 14px; }
+    .availability-card span { color: var(--muted); font-size: 12px; }
+    .contact-panel {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px; align-items: center;
+      padding: clamp(24px, 4vw, 38px); border-radius: 26px; border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(18,34,55,.95), rgba(10,19,32,.92));
+    }
+    .contact-links { display: grid; gap: 12px; min-width: 0; }
+    .contact-link {
+      display: flex; align-items: center; gap: 13px; min-width: 0; padding: 15px;
+      border: 1px solid var(--line); border-radius: 14px; color: var(--text);
+      background: rgba(255,255,255,.025);
+    }
+    .contact-link:hover { border-color: rgba(85,224,208,.45); }
+    .contact-link .service-icon { flex: 0 0 40px; margin: 0; }
+    .contact-link b { display: block; font-size: 13px; }
+    .contact-link small { display: block; color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .footer-inner a { color: #c6d8ee; }
+
+    /* Tablets e notebooks menores */
+    @media (max-width: 1024px) {
+      .container { width: min(var(--max), calc(100% - 40px)); }
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(230px, .85fr);
+        gap: 28px;
+      }
+      .projects-panel { gap: 22px; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(220px, .78fr); }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .expertise { gap: 28px; }
+      .nav-links { gap: 14px; font-size: 12px; }
+      .nav-cta { padding-inline: 15px; }
+    }
+
+    /* Celulares e tablets em orientação estreita */
+    @media (max-width: 760px) {
+      :root { --header-height: 68px; }
+      .container { width: calc(100% - 36px); }
+
+      .menu-btn {
+        display: inline-grid;
+        place-items: center;
+        flex: 0 0 44px;
+      }
+      .nav-cta { display: none; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 14px 18px 20px;
+        background: #0b1423;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+        box-shadow: 0 18px 28px rgba(0,0,0,.24);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 4px; }
+
+      .hero-grid,
+      .about-grid,
+      .expertise,
+      .contact-panel {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-grid { gap: 32px; }
+      .visual-card { width: min(100%, 470px); }
+      .callout { align-items: flex-start; flex-direction: column; }
+
+      /* Correção principal: texto e botão deixam de disputar a mesma linha/coluna. */
+      .projects-panel {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 22px;
+      }
+      .projects-panel > div { min-width: 0; width: 100%; }
+      .projects-panel p { max-width: 100%; }
+      .projects-panel .btn {
+        justify-self: start;
+        width: fit-content;
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      .contact-panel { gap: 24px; }
+      .availability-card { align-items: flex-start; }
+      .availability-card > div:last-child { min-width: 0; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 32px); }
+      .brand { gap: 9px; font-size: 14px; min-width: 0; }
+      .brand small { font-size: 9px; letter-spacing: .08em; }
+      .brand > span:last-child { min-width: 0; }
+      .hero { padding-top: 52px; }
+      h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
+      h2 { font-size: clamp(1.75rem, 8vw, 2.35rem); }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .hero-note { align-items: flex-start; line-height: 1.5; }
+      .services-grid, .availability-grid { grid-template-columns: minmax(0, 1fr); }
+      .service { min-height: 0; }
+      .panel { padding: 21px; }
+      .visual-card { padding: 21px; }
+      .projects-panel { padding: 22px; }
+      .projects-panel h3 { font-size: 19px; }
+      .projects-panel .btn { width: 100%; }
+      .callout { padding: 23px; }
+      .callout .btn { width: 100%; }
+      .contact-panel { padding: 22px; }
+      .contact-link { padding: 13px; }
+      .footer-inner { flex-direction: column; }
+    }
+
+    /* Telas muito estreitas */
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 28px); }
+      .brand { font-size: 13px; }
+      .brand-mark { width: 36px; height: 36px; flex-basis: 36px; }
+      .menu-btn { min-width: 42px; min-height: 42px; }
+      .projects-panel { padding: 18px; }
+      .projects-panel .btn { padding-inline: 14px; font-size: 12px; }
+      .availability-card { gap: 12px; padding: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media (hover: none) {
+      .service:hover, .btn:hover, .nav-cta:hover { transform: none; }
+    }
+    @media print {
+      :root { color-scheme: light; }
+      body { color: #111827; background: #fff; }
+      .nav-wrap, .hero-actions, .menu-btn { display: none !important; }
+      .panel, .service, .contact-panel, .availability-card { break-inside: avoid; background: #fff; border-color: #d1d5db; }
+      .panel p, .service p, .section-head p, .body-copy, .callout p { color: #374151; }
+      section, .hero { padding: 24px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="nav-wrap">
+    <nav class="container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Cássio Winkler — página inicial">
+        <span class="brand-mark" aria-hidden="true">CW</span>
+        <span>Cássio Winkler<small>Tecnologia e Negócios</small></span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#publicacoes">Publicações</a>
+        <a href="#disponibilidade">Disponibilidade</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <a class="nav-cta" href="mailto:winklercassio@gmail.com?subject=Vamos%20conversar%20sobre%20um%20projeto">Fale comigo <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+    <header class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Consultoria, sistemas e inovação</div>
+          <h1>Seu parceiro estratégico em <span class="gradient-text">soluções tecnológicas.</span></h1>
+          <p class="hero-copy">Conecto tecnologia, processos e objetivos de negócio para transformar desafios empresariais em soluções eficientes, de sistemas corporativos e gestão de dados ao desenvolvimento de software. Atendo empresas em Guarapuava e região, no Paraná, e projetos remotos em todo o Brasil.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:winklercassio@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20consultoria">Vamos conversar <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="#servicos">Conheça meus serviços</a>
+          </div>
+          <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> Atendimento presencial em Guarapuava e região, no Paraná, e remoto para empresas de todo o Brasil.</div>
+        </div>
+
+        <aside class="visual-card" aria-label="Apresentação profissional de Cássio Winkler">
+          <div class="visual-top"><span>Perfil profissional</span><span>TI · Negócios</span></div>
+          <div class="monogram" aria-hidden="true"><span>CW</span></div>
+          <h2>Cássio Winkler</h2>
+          <p>Especialista em Tecnologia da Informação</p>
+          <div class="mini-tags" aria-label="Principais áreas">
+            <span>ERP TOTVS</span><span>SQL e BI</span><span>ADVPL</span><span>Negócios</span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Sobre</div>
+          <h2 id="sobre-titulo">Tecnologia com visão de negócio.</h2>
+          <p>Atuação técnica e estratégica para aproximar pessoas, processos e tecnologia.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="panel">
+            <p>Especialista em Tecnologia da Informação, com sólida atuação em projetos estratégicos, sustentação de sistemas e transformação digital. Experiência com ERP TOTVS (RM e Protheus), análise de negócios e gestão de projetos de TI, conectando as necessidades das áreas empresariais às soluções tecnológicas.</p>
+            <br>
+            <p>Atuação em levantamento de requisitos, implantação de soluções corporativas e integração entre áreas de negócio e tecnologia, além de conhecimentos em SQL, BI, ADVPL e melhoria contínua de processos. Perfil analítico, com visão estratégica e técnica, capacidade de liderança e foco na eficiência operacional, na otimização de processos e na inovação tecnológica. A experiência abrange o entendimento do cenário, a análise das necessidades, a definição de alternativas e o acompanhamento da evolução das soluções.</p>
+          </div>
+
+          <div class="panel focus-list">
+            <div class="focus-item"><div class="focus-icon" aria-hidden="true">⌘</div><div><strong>Visão integrada</strong><span>Entendimento das necessidades do negócio e tradução em soluções tecnológicas.</span></div></div>
+            <div class="focus-item"><div class="focus-icon" aria-hidden="true">↗</div><div><strong>Eficiência operacional</strong><span>Melhoria contínua de processos, sistemas e fluxos de trabalho.</span></div></div>
+            <div class="focus-item"><div class="focus-icon" aria-hidden="true">◎</div><div><strong>Atuação estratégica</strong><span>Apoio à tomada de decisões, a projetos e à evolução do ambiente de tecnologia.</span></div></div>
+            <div class="focus-item"><div class="focus-icon" aria-hidden="true">⌁</div><div><strong>Execução técnica</strong><span>Experiência com sistemas corporativos, bancos de dados e desenvolvimento.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Serviços</div>
+          <h2 id="servicos-titulo">Soluções para desafios reais.</h2>
+          <p>Consultoria e desenvolvimento de soluções alinhadas às necessidades de cada operação.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">▤</div>
+            <h3>Bancos de dados</h3>
+            <p>Modelagem, consultas, organização e otimização de dados para apoiar sistemas e decisões.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">⌘</div>
+            <h3>Desenvolvimento web</h3>
+            <p>Criação de aplicações e interfaces web para digitalizar processos e serviços.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">⚙</div>
+            <h3>Desenvolvimento de software personalizado</h3>
+            <p>Soluções sob medida para necessidades específicas e rotinas do negócio.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">◇</div>
+            <h3>Consultoria de negócios</h3>
+            <p>Análise de processos, levantamento de requisitos e identificação de oportunidades.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">⌬</div>
+            <h3>Consultoria de TI</h3>
+            <p>Apoio na avaliação de cenários, sistemas, prioridades e iniciativas tecnológicas.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">☁</div>
+            <h3>Desenvolvimento de SaaS</h3>
+            <p>Planejamento e desenvolvimento de soluções de software como serviço.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">◉</div>
+            <h3>Suporte técnico</h3>
+            <p>Diagnóstico, sustentação e apoio à continuidade dos ambientes tecnológicos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidades" aria-labelledby="especialidades-titulo">
+      <div class="container expertise">
+        <div>
+          <div class="section-kicker">Especialidades</div>
+          <h2 id="especialidades-titulo">Conhecimento técnico alinhado à operação.</h2>
+          <p class="body-copy">Experiência e atuação em tecnologias e plataformas que apoiam a gestão, a integração e a evolução dos negócios.</p>
+        </div>
+
+        <div class="tech-wrap" aria-label="Tecnologias e áreas de atuação">
+          <span class="tag">TOTVS Protheus</span>
+          <span class="tag">TOTVS RM</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Business Intelligence (BI)</span>
+          <span class="tag">ADVPL</span>
+          <span class="tag">Análise de negócios</span>
+          <span class="tag">Gestão de projetos de TI</span>
+          <span class="tag">Levantamento de requisitos</span>
+          <span class="tag">Sustentação de sistemas</span>
+          <span class="tag">Transformação digital</span>
+          <span class="tag">Integração de sistemas</span>
+          <span class="tag">Melhoria contínua</span>
+          <span class="tag">Desenvolvimento de software</span>
+          <span class="tag">Bancos de dados</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Projetos e experiências</div>
+          <h2 id="projetos-titulo">Experiência aplicada a desafios reais.</h2>
+          <p>Conheça projetos e iniciativas que demonstram minha atuação em tecnologia, sistemas, processos e transformação digital.</p>
+        </div>
+        <div class="projects-panel">
+          <div>
+            <div class="section-kicker">Portfólio profissional</div>
+            <h3>Projetos apresentados no LinkedIn</h3>
+            <p>Reuni no LinkedIn projetos e experiências profissionais que complementam minha apresentação. Acesse para conhecer melhor as iniciativas, os contextos e as soluções que fazem parte da minha trajetória.</p>
+          </div>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/cassiowinklerti/details/projects/" target="_blank" rel="noopener noreferrer">Conheça meus projetos <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicacoes" aria-labelledby="publicacoes-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Artigos e publicações</div>
+          <h2 id="publicacoes-titulo">Ideias, conhecimento e experiências compartilhadas.</h2>
+          <p>Publico conteúdos sobre tecnologia, sistemas corporativos, TOTVS, dados, desenvolvimento e gestão, com foco em compartilhar conhecimento e discutir desafios do ambiente empresarial.</p>
+        </div>
+        <div class="projects-panel">
+          <div>
+            <div class="section-kicker">Conteúdo profissional</div>
+            <h3>Acompanhe minhas publicações no LinkedIn</h3>
+            <p>Confira artigos, análises e conteúdos técnicos sobre tecnologia e negócios. Um espaço para acompanhar ideias, aprendizados e perspectivas sobre a evolução dos ambientes empresariais.</p>
+          </div>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/cassiowinklerti/recent-activity/all/" target="_blank" rel="noopener noreferrer">Ver publicações <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Convite para contato">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <div class="section-kicker">Vamos construir juntos</div>
+            <h2>Seu próximo desafio pode começar com uma boa conversa.</h2>
+            <p>Se sua empresa precisa modernizar sistemas, organizar processos ou desenvolver uma solução tecnológica, vamos entender o cenário e avaliar os próximos passos.</p>
+          </div>
+          <a class="btn btn-primary" href="mailto:winklercassio@gmail.com?subject=Conversa%20sobre%20solu%C3%A7%C3%B5es%20tecnol%C3%B3gicas">Solicitar contato <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="disponibilidade" aria-labelledby="disponibilidade-titulo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Disponibilidade</div>
+          <h2 id="disponibilidade-titulo">Modalidades de atendimento.</h2>
+          <p>Atuação presencial em Guarapuava e região, no Paraná, e atendimento remoto para empresas de todo o Brasil, conforme o escopo e as necessidades de cada projeto.</p>
+        </div>
+        <div class="availability-grid">
+          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌘</div><div><strong>Atendimento remoto em todo o Brasil</strong><span>Consultoria, desenvolvimento e acompanhamento de projetos a distância para empresas de diferentes regiões.</span></div></div>
+          <div class="availability-card"><div class="service-icon" aria-hidden="true">⌖</div><div><strong>Atendimento presencial em Guarapuava e região</strong><span>Atuação local no Paraná, conforme a necessidade e o escopo do projeto.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" aria-labelledby="contato-titulo">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="section-kicker">Contato</div>
+            <h2 id="contato-titulo">Vamos conversar sobre seu projeto?</h2>
+            <p class="body-copy">Entre em contato para apresentar sua demanda, trocar ideias ou avaliar uma oportunidade de parceria.</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:winklercassio@gmail.com">
+              <span class="service-icon" aria-hidden="true">✉</span>
+              <span><b>E-mail</b><small>winklercassio@gmail.com</small></span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/cassiowinklerti/" target="_blank" rel="noopener noreferrer">
+              <span class="service-icon" aria-hidden="true">in</span>
+              <span><b>LinkedIn</b><small>linkedin.com/in/cassiowinklerti</small></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Cássio Winkler. Todos os direitos reservados.</span>
+      <span>Tecnologia, negócios e inovação · Guarapuava e região, Paraná · Atendimento remoto em todo o Brasil</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const menuButton = document.getElementById("menuBtn");
+      const navigation = document.getElementById("navLinks");
+
+      if (menuButton && navigation) {
+        const closeMenu = () => {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Abrir menu");
+          menuButton.querySelector("span").textContent = "☰";
+        };
+
+        menuButton.addEventListener("click", () => {
+          const isOpen = navigation.classList.toggle("open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+          menuButton.querySelector("span").textContent = isOpen ? "×" : "☰";
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!navigation.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 760) closeMenu();
+        }, { passive: true });
+      }
+
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
