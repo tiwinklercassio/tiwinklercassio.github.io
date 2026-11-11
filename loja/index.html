@@ -144,9 +144,9 @@
             </div>
         </div>
 
-        <!-- CATEGORIES BAR -->
-        <nav class="border-t border-zinc-900/80 bg-zinc-950/60 overflow-x-auto no-scrollbar">
-            <div class="max-w-7xl mx-auto px-4 flex items-center gap-2 py-2.5 text-xs font-medium whitespace-nowrap" id="categoriesNav">
+        <!-- CATEGORIES BAR (Ajustado para quebrar linha responsivamente) -->
+        <nav class="border-t border-zinc-900/80 bg-zinc-950/60">
+            <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-2 py-3 text-xs font-medium" id="categoriesNav">
                 <!-- Inserido dinamicamente via JS -->
             </div>
         </nav>
@@ -549,7 +549,6 @@
                 image: "https://http2.mlstatic.com/D_NQ_NP_2X_671735-MLA116842476956_092026-F.webp",
                 badge: "Ferramenta 18mm"
             },
-            // NOVOS PRODUTOS SOLICITADOS
             {
                 id: 34,
                 name: "Kit 2 Pneus Barum Bravuris 5HM 175/70R13 Aro 13 Carro Silenciosos e Econômicos",
@@ -644,7 +643,7 @@
                 const isActive = activeCategory === cat.id;
                 return `
                     <button onclick="filterCategory('${cat.id}')" 
-                        class="px-4 py-1.5 rounded-full transition duration-200 flex items-center gap-2 ${
+                        class="px-3.5 py-1.5 rounded-full transition duration-200 flex items-center gap-2 ${
                             isActive 
                             ? 'bg-white text-black font-semibold shadow-md' 
                             : 'text-zinc-400 hover:text-white hover:bg-zinc-900 border border-transparent hover:border-zinc-800'
@@ -690,7 +689,7 @@
                             </div>
                         </div>
 
-                        <!-- Imagem do Produto com Fallback -->
+                        <!-- Imagem do Produto com Fallback e Otimização -->
                         <div class="relative w-full aspect-square bg-zinc-900/50 rounded-xl mb-4 overflow-hidden flex items-center justify-center p-4 group-hover:scale-105 transition-transform duration-300">
                             <img src="${product.image}" 
                                    alt="${product.name}" 
