@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cássio Winkler Store - Ofertas Lojas Oficiais Mercado Livre & Shopee </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            bg: '#000000',
+                            card: '#161617',
+                            cardHover: '#1c1c1e',
+                            text: '#f5f5f7',
+                            subtext: '#86868b',
+                            blue: '#2997ff',
+                            blueHover: '#0077ed',
+                            accent: '#34c759'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', 'Segoe UI', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilização da barra de rolagem customizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333336;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #55555a;
+        }
+        /* Gradiente animado estilo Apple */
+        .apple-gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .apple-badge-gradient {
+            background: linear-gradient(135deg, rgba(41,151,255,0.15) 0%, rgba(52,199,89,0.15) 100%);
+            border: 1px solid rgba(41,151,255,0.3);
+        }
+    </style>
+</head>
+<body class="bg-black text-apple-text font-sans antialiased selection:bg-apple-blue selection:text-white min-h-screen flex flex-col">
+
+    <!-- MODAL DE AVISO LEGAL E TRANSPARÊNCIA DE AFILIADO -->
+    <div id="legalModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+        <div class="bg-apple-card border border-zinc-800 rounded-2xl max-w-lg w-full p-6 md:p-8 shadow-2xl relative text-left">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-apple-blue/10 flex items-center justify-center text-apple-blue flex-shrink-0">
+                    <i class="fa-solid fa-scale-balanced text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Aviso de Transparência Legal</h3>
+                    <p class="text-xs text-apple-subtext">Informação ao Consumidor</p>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs md:text-sm text-zinc-400 leading-relaxed mb-6">
+                <p>
+                    Este site (<strong class="text-white">Cássio Winkler Store</strong>) opera exclusivamente como um <strong class="text-white">catálogo intermediador de ofertas de afiliados</strong>.
+                </p>
+                <p>
+                    Todos os links exibidos nesta plataforma redirecionam você diretamente para as <strong class="text-white">Lojas Oficiais autenticadas no Mercado Livre & Shopee</strong>.
+                </p>
+                <p>
+                    Não realizamos venda direta, estocagem, nem processamento de pagamentos. A transação final, emissão de nota fiscal, garantia de fábrica e entrega são de responsabilidade única e exclusiva das Lojas Oficiais dentro do Mercado Livre.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button onclick="acceptLegalNotice()" class="w-full py-3 px-4 bg-apple-blue hover:bg-apple-blueHover text-white font-medium rounded-xl transition-colors text-center text-xs md:text-sm shadow-lg shadow-apple-blue/20">
+                    Compreendi e Aceito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-blue-950 via-zinc-900 to-emerald-950 border-b border-zinc-800 text-xs py-2 px-4 text-center text-zinc-300 flex items-center justify-center gap-2">
+        <i class="fa-solid font-bold fa-shield-halved text-apple-accent"></i>
+        <span><strong>100% de Segurança:</strong> Todos os produtos redirecionam para <strong>Lojas Oficiais no Mercado Livre</strong>.</span>
+    </div>
+
+    <!-- NAVBAR (Estilo Apple / iPlace) -->
+    <header class="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-zinc-800/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-4">
+                
+                <!-- Logo -->
+                <a href="#" onclick="filterCategory('todos')" class="flex items-center gap-2.5 font-semibold text-lg tracking-tight hover:opacity-90 transition">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-apple-blue to-blue-700 flex items-center justify-center text-white shadow-md shadow-apple-blue/20">
+                        <i class="fa-solid fa-bag-shopping text-sm"></i>
+                    </div>
+                    <span class="font-bold text-white tracking-wide">Cássio Winkler <span class="text-apple-blue font-light">Store</span></span>
+                </a>
+
+                <!-- Desktop Search Bar -->
+                <div class="hidden md:flex items-center flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-500">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Buscar iPhone, Air Fryer, Smart TV..." 
+                            class="w-full pl-9 pr-4 py-1.5 bg-zinc-900/90 text-sm text-zinc-200 placeholder-zinc-500 rounded-full border border-zinc-800 focus:outline-none focus:border-apple-blue focus:ring-1 focus:ring-apple-blue transition">
+                    </div>
+                </div>
+
+                <!-- Verified Store Badge Header -->
+                <div class="hidden sm:flex items-center gap-2 text-xs text-zinc-400 bg-zinc-900 px-3 py-1.5 rounded-full border border-zinc-800">
+                    <i class="fa-solid fa-circle-check text-yellow-500"></i>
+                    <span>Mercado Livre Afiliados</span>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar -->
+            <div class="pb-3 md:hidden">
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="searchInputMobile" onkeyup="handleSearchMobile()" placeholder="Buscar produtos..." 
+                        class="w-full pl-9 pr-4 py-2 bg-zinc-900 text-sm text-zinc-200 placeholder-zinc-500 rounded-full border border-zinc-800 focus:outline-none focus:border-apple-blue">
+                </div>
+            </div>
+        </div>
+
+        <!-- CATEGORIES BAR -->
+        <nav class="border-t border-zinc-900/80 bg-zinc-950/60 overflow-x-auto no-scrollbar">
+            <div class="max-w-7xl mx-auto px-4 flex items-center gap-2 py-2.5 text-xs font-medium whitespace-nowrap" id="categoriesNav">
+                <!-- Inserido dinamicamente via JS -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO BANNER (Estilo Apple Event) -->
+    <section class="relative bg-gradient-to-b from-zinc-950 to-black py-12 md:py-20 px-4 overflow-hidden border-b border-zinc-900">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#2997ff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full apple-badge-gradient text-apple-blue text-xs font-medium mb-6">
+                <i class="fa-solid fa-bolt text-yellow-400"></i> Produtos de Lojas Verificadas
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4 apple-gradient-text">
+                As melhores ofertas das Lojas Oficiais.
+            </h1>
+            <p class="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-8">
+                Seleção curada de produtos direto das lojas oficiais do Mercado Livre. Garantia do fabricante, parcelamento flexível e a maior segurança do Brasil.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs text-zinc-400">
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-apple-blue"></i> Entrega Rápida</div>
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-shield-check text-apple-accent"></i> Garantia de Fábrica</div>
+                <div class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-emerald-400"></i> Pagamento Seguro no ML</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CATALOG CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full">
+        
+        <!-- SECTION TITLE & COUNT -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div>
+                <h2 id="currentCategoryTitle" class="text-2xl font-bold text-white tracking-tight">Todos os Produtos</h2>
+                <p id="productCount" class="text-xs text-zinc-500 mt-1">Exibindo ofertas</p>
+            </div>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Os cards de produtos serão renderizados aqui pelo JS -->
+        </div>
+
+        <!-- EMPTY STATE (Busca sem resultado) -->
+        <div id="emptyState" class="hidden text-center py-20">
+            <div class="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mx-auto mb-4 text-zinc-600 text-2xl">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-1">Nenhum produto encontrado</h3>
+            <p class="text-zinc-500 text-sm mb-4">Tente buscar com outro termo ou mude a categoria selecionada.</p>
+            <button onclick="resetFilters()" class="text-xs text-apple-blue hover:underline font-medium">Limpar busca e filtros</button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 text-zinc-500 text-xs mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2.5 text-white font-bold text-base mb-3">
+                        <div class="w-6 h-6 rounded bg-apple-blue/20 flex items-center justify-center text-apple-blue">
+                            <i class="fa-solid fa-bag-shopping text-xs"></i>
+                        </div>
+                        <span>Cássio Winkler Store</span>
+                    </div>
+                    <p class="leading-relaxed text-zinc-400">
+                        Catálogo independente de afiliados. Divulgamos ofertas diretamente vinculadas às <strong>Lojas Oficiais</strong> no Mercado Livre para garantir a melhor procedência, garantia e preço.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3">Garantia e Segurança</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-apple-accent"></i> Vendedores Oficiais Autenticados</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-apple-accent"></i> Proteção ao Consumidor Mercado Livre</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-apple-accent"></i> Redirecionamento Direto</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3">Transparência Legal</h4>
+                    <p class="leading-relaxed">
+                        Os preços, disponibilidade e condições promocionais aqui listados são de inteira responsabilidade das Lojas Oficiais vendedoras no Mercado Livre e podem variar sem aviso prévio.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-zinc-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; <span id="year"></span> Cássio Winkler Store. Todos os direitos reservados.</p>
+                <div class="flex items-center gap-4">
+                    <button onclick="openLegalModal()" class="text-zinc-400 hover:text-white underline">Aviso Legal</button>
+                    <span>|</span>
+                    <span class="inline-flex items-center gap-1 text-zinc-400">
+                        <i class="fa-solid fa-lock text-emerald-500"></i> Ambiente Seguro
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE DADOS E FUNCIONALIDADES -->
+    <script>
+        // ANO DINÂMICO FOOTER
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        /* ==========================================================================
+            BASE DE DADOS DE PRODUTOS (Com Imagens Oficiais do ML)
+            ========================================================================== */
+        const productsData = [
+            {
+                id: 1,
+                name: "CrystalArmor Película Privacidade Anti Spy iPhone (Kit 2)",
+                category: "Acessórios",
+                officialStore: "CrystalArmor Oficial",
+                link: "https://meli.la/1bLAmZ3",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_693183-MLB117513507113_092026-F-crystalarmor-pelicula-privacidade-anti-spy-iphone-2-kit.webp",
+                badge: "Anti Spy Premium"
+            },
+            {
+                id: 2,
+                name: "iPhone 16e (128 GB) - Loja Oficial Apple",
+                category: "Apple",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/2uZUZKS",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_961264-MLA95713213402_102025-F.webp",
+                badge: "Super Oferta"
+            },
+            {
+                id: 3,
+                name: "iPhone 16 (128 GB) - Loja Oficial Apple",
+                category: "Apple",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/1U2D5xX",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_814556-MLA95640549800_102025-F.webp",
+                badge: "Mais Vendido"
+            },
+            {
+                id: 4,
+                name: "Apple iPhone 15 (128 GB) - Loja Oficial Apple",
+                category: "Apple",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/1XPTL6V",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_680991-MLA95497804976_102025-F.webp",
+                badge: "Destaque"
+            },
+            {
+                id: 5,
+                name: "iPhone 17 Pro Max 256GB - Laranja-cósmico",
+                category: "Apple",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/12wheZY",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_739019-MLA95656293708_102025-F.webp",
+                badge: "Lançamento Premium"
+            },
+            {
+                id: 6,
+                name: "Cabo De Conexão USB-C Para Lightning Apple (1 M)",
+                category: "Acessórios",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/2wpnuEB",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_721134-MLA112311654516_062026-F.webp",
+                badge: "Original"
+            },
+            {
+                id: 7,
+                name: "Air Fryer Oven Britânia 11L 8 Funções 1800W BAF11A",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Britânia",
+                link: "https://meli.la/1Cfd6pN",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_788191-MLA105750115584_022026-F.webp",
+                badge: "Destaque Cozinha"
+            },
+            {
+                id: 8,
+                name: "Parafusadeira Furadeira De Impacto The Black Tools TB-21PX (2 Baterias)",
+                category: "Ferramentas",
+                officialStore: "Loja Oficial The Black Tools",
+                link: "https://meli.la/1SuUnZz",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_981459-MLA117136184907_092026-F.webp",
+                badge: "Completa com Maleta"
+            },
+            {
+                id: 9,
+                name: "Philips OneBlade Aparador e Barbeador Elétrico QP1425/10",
+                category: "Cuidados",
+                officialStore: "Loja Oficial Philips",
+                link: "https://meli.la/29DT2tp",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_750670-MLA118429558724_102026-F.webp",
+                badge: "À Prova d'Água"
+            },
+            {
+                id: 10,
+                name: "Smart TV TCL 55\" QLED 4K P8K 144Hz Google TV 55P8K",
+                category: "Eletrônicos",
+                officialStore: "Loja Oficial TCL",
+                link: "https://meli.la/2MbBZVc",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_983068-MLA116274196004_092026-F.webp",
+                badge: "QLED 4K"
+            },
+            {
+                id: 11,
+                name: "Smartphone Motorola Moto G06 - 64GB 4GB RAM - Azul Marinho",
+                category: "Smartphones",
+                officialStore: "Loja Oficial Motorola",
+                link: "https://meli.la/17hpGs4",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_879828-MLA116321124714_092026-F.webp",
+                badge: "Custo-Benefício"
+            },
+            {
+                id: 12,
+                name: "Smartphone Motorola Moto G17 4G - 128GB 4GB RAM - Azul",
+                category: "Smartphones",
+                officialStore: "Loja Oficial Motorola",
+                link: "https://meli.la/1xwM2WA",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_773592-MLA105493148200_012026-F.webp",
+                badge: "Tela FHD+"
+            },
+            {
+                id: 13,
+                name: "Notebook Acer Aspire Go 15 Intel Core I3 1215u 8gb 256gb Ssd Linux Prateado",
+                category: "Informática",
+                officialStore: "Loja Oficial Acer",
+                link: "https://meli.la/2tgRrtm",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_961013-MLA108328142667_032026-F.webp",
+                badge: "Essencial"
+            },
+            {
+                id: 14,
+                name: "Monitor Portátil Yodoit 15.6\" Full HD IPS para Trabalho e Jogos com USB-C e HDMI",
+                category: "Informática",
+                officialStore: "Loja Oficial Yodoit",
+                link: "https://meli.la/2est4eh",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_887623-MLA82862556224_032025-F.webp",
+                badge: "Portátil Full HD"
+            },
+            {
+                id: 15,
+                name: "Notebook Acer Nitro V15 ANV15-52-51E4 – Intel Core i5-13420H 16GB RAM NVIDIA RTX 4050 512SSD 165Hz",
+                category: "Informática",
+                officialStore: "Loja Oficial Acer",
+                link: "https://meli.la/2s8xPc3",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_933021-MLA99446594058_112025-F.webp",
+                badge: "Gamer Alta Performance"
+            },
+            {
+                id: 16,
+                name: "MacBook Neo de 13 polegadas: Chip A18 Pro, CPU de 6 núcleos, 512GB, Touch ID - Prateado",
+                category: "Informática",
+                officialStore: "Loja Oficial Apple",
+                link: "https://meli.la/2gG7bPu",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_671170-MLA108115532807_032026-F.webp",
+                badge: "Inovação Apple"
+            },
+            {
+                id: 17,
+                name: "Munhequeira Elástica Crossfit Lpo Pulso Musculação Skyhill",
+                category: "Esportes",
+                officialStore: "Loja Oficial Skyhill",
+                link: "https://meli.la/32kSvDa",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_821596-MLB98789193939_112025-F-munhequeira-elastica-crossfit-lpo-pulso-musculacao-skyhill.webp",
+                badge: "Proteção Pulso"
+            },
+            {
+                id: 18,
+                name: "Corda De Pular Pvc 2,90mt Ajustável Academia Crossfit",
+                category: "Esportes",
+                officialStore: "Loja Oficial Skyhill",
+                link: "https://meli.la/29Kajw7",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_781606-MLB114242109040_082026-F-corda-de-pular-pvc-290mt-ajustavel-academia-crossfit.webp",
+                badge: "Cardio e Agilidade"
+            },
+            {
+                id: 19,
+                name: "Hand Grip Crossfit Competition Skyhill Original Luva Lpo Wod",
+                category: "Esportes",
+                officialStore: "Loja Oficial Skyhill",
+                link: "https://meli.la/1nXGUWu",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_862960-MLB91753716986_092025-F-hand-grip-crossfit-competition-skyhill-original-luva-lpo-wod.webp",
+                badge: "WOD Seguro"
+            },
+            {
+                id: 20,
+                name: "Joelheira De Compressão Elástica Ortopédica Crossfit Premium Cor Preto Tamanho M",
+                category: "Esportes",
+                officialStore: "Loja Oficial Skyhill",
+                link: "https://meli.la/15fS4Ty",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_910743-MLA99489151966_112025-F.webp",
+                badge: "Suporte Articular"
+            },
+            {
+                id: 21,
+                name: "Purificador de Água Gelada Fria e Natural Elétrico Electrolux PE12G Painel Touch Bivolt Cinza",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Electrolux",
+                link: "https://meli.la/2dAHcgf",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_619844-MLA99938311049_112025-F.webp",
+                badge: "Água Purificada"
+            },
+            {
+                id: 22,
+                name: "Smart TV AOC 50'' Roku 4K UHD DLED Wi-Fi Dolby Audio 50U7066",
+                category: "Eletrônicos",
+                officialStore: "Loja Oficial AOC",
+                link: "https://meli.la/2MngU5P",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_817676-MLA115644044060_092026-F.webp",
+                badge: "Smart 4K Roku"
+            },
+            {
+                id: 23,
+                name: "Bomba De Ar De Mão Pneu Car Air Pump Sem Fio 150 Psi Luz De Emergência Led Verunto",
+                category: "Automotivo",
+                officialStore: "Loja Oficial Verunto",
+                link: "https://meli.la/1VfRB9w",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_695590-MLA110946316826_052026-F.webp",
+                badge: "Sem Fio 150 PSI"
+            },
+            {
+                id: 24,
+                name: "Notebook Acer Aspire Go 15 Intel Core i3 13ª Geração 8GB RAM 256GB SSD Tela 15.3\" WUXGA IPS",
+                category: "Informática",
+                officialStore: "Loja Oficial Acer",
+                link: "https://meli.la/2MyFygM",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_692920-MLA100061644521_122025-F.webp",
+                badge: "Tela 15.3 IPS"
+            },
+            {
+                id: 25,
+                name: "Maquininha De Cartão Mercado Pago Point Smart 2 4G Wifi NFC",
+                category: "Eletrônicos",
+                officialStore: "Loja Oficial Mercado Pago",
+                link: "https://meli.la/23QeTJ9",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_992864-MLB118557234419_102026-F-maquininha-de-cartao-mercado-pago-point-smart-2--4g-wifi-nfc.webp",
+                badge: "Point Smart 2"
+            },
+            {
+                id: 26,
+                name: "Grand Theft Auto VI - PlayStation 5",
+                category: "Eletrônicos",
+                officialStore: "Loja Oficial PlayStation",
+                link: "https://meli.la/2vfcH1U",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_639067-MLA114816196520_082026-F.webp",
+                badge: "Lançamento PS5"
+            },
+            {
+                id: 27,
+                name: "Sony PlayStation Store Gift Card R$ 150 (Digital)",
+                category: "Giftcards",
+                officialStore: "Loja Oficial Sony",
+                link: "https://meli.la/1Xji7ZL",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_902418-MLA116666090065_082026-F.webp",
+                badge: "Digital R$ 150"
+            },
+            {
+                id: 28,
+                name: "Ar Condicionado LG Inverter Smart Voice AI 12.000 Btus Frio R-32",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial LG",
+                link: "https://meli.la/23fUrLU",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_642524-MLA107696344688_032026-F.webp",
+                badge: "Inverter AI"
+            },
+            {
+                id: 29,
+                name: "Liquidificador Turbo Power Mondial 550W - L-99 FB",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Mondial",
+                link: "https://meli.la/1DqSByP",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_744049-MLA99539379058_122025-F.webp",
+                badge: "Turbo 550W"
+            },
+            {
+                id: 30,
+                name: "Aspirador Pó E Água Soprador Wap Gtw 10 Maré 1400w Cor Cinza",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial WAP",
+                link: "https://meli.la/29MPmEj",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_907459-MLA107524341246_032026-F.webp",
+                badge: "1400W Pó e Água"
+            },
+            {
+                id: 31,
+                name: "Kit 2 Refil De Água Acqua Pure Electrolux Pe12a Pe12b Pe12g PC01X",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Electrolux",
+                link: "https://meli.la/1RsHqhs",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_764049-MLA114244626520_082026-F.webp",
+                badge: "Kit 2 Refis"
+            },
+            {
+                id: 32,
+                name: "Aspirador de Pó Vertical Electrolux 1450W STK15 com Fio Portátil 2 em 1 Filtro Hepa",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Electrolux",
+                link: "https://meli.la/1h3aZb9",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_692662-MLA112368634214_062026-F.webp",
+                badge: "Vertical 2 em 1"
+            },
+            {
+                id: 33,
+                name: "Estilete Vonder ES 218 18mm com 2 Lâminas",
+                category: "Ferramentas",
+                officialStore: "Loja Oficial Vonder",
+                link: "https://meli.la/1uyQ1tc",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_671735-MLA116842476956_092026-F.webp",
+                badge: "Ferramenta 18mm"
+            },
+            // NOVOS PRODUTOS SOLICITADOS
+            {
+                id: 34,
+                name: "Kit 2 Pneus Barum Bravuris 5HM 175/70R13 Aro 13 Carro Silenciosos e Econômicos",
+                category: "Automotivo",
+                officialStore: "Loja Oficial Mercado Livre",
+                link: "https://meli.la/15UtCUA",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_749571-MLA116705816392_092026-F.webp",
+                badge: "Kit 2 Pneus Aro 13"
+            },
+            {
+                id: 35,
+                name: "Pc Gamer Completo I7 3.4ghz 16gb Ssd 480gb 500w Monitor 19",
+                category: "Informática",
+                officialStore: "Loja Oficial Mercado Livre",
+                link: "https://meli.la/1p4BkHn",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_987505-MLB104305095498_012026-F-pc-gamer-completo--i7-34ghz-16gb-ssd-480gb-500w-monitor-19.webp",
+                badge: "PC Gamer Completo"
+            },
+            {
+                id: 36,
+                name: "Sabonete Em Barra Natura Tododia De 5x 90g Cereja Negra E Praliné",
+                category: "Cuidados",
+                officialStore: "Loja Oficial Natura",
+                link: "https://meli.la/13wmnTh",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_714107-MLA109213296262_042026-F.webp",
+                badge: "Kit Sabonetes 5x"
+            },
+            {
+                id: 37,
+                name: "Kaiak Masculino Tradicional Natura Desodorante Colônia Perfume Clássico Original 100ml",
+                category: "Cuidados",
+                officialStore: "Loja Oficial Natura",
+                link: "https://meli.la/2snEu83",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_855674-MLB82072375377_012025-F-kaiak-masculino-tradicional-natura-desodorante-colonia-perfume-classico-original-100ml.webp",
+                badge: "Perfume Clássico"
+            },
+            {
+                id: 38,
+                name: "Chuveiro Elétrico Lorenzetti Loren Shower Ultra Eletrônico 5.5kW",
+                category: "Eletrodomésticos",
+                officialStore: "Loja Oficial Lorenzetti",
+                link: "https://meli.la/2PkVN2S",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_968401-MLA111909585059_052026-F.webp",
+                badge: "Eletrônico 5.5kW"
+            },
+            {
+                id: 39,
+                name: "Basic Whey 1kg Growth Supplements",
+                category: "Esportes",
+                officialStore: "Loja Oficial Growth Supplements",
+                link: "https://meli.la/254Hgd9",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_670198-MLB110985378123_042026-F-basic-whey-1kg-growth-supplements.webp",
+                badge: "Basic Whey 1kg"
+            },
+            {
+                id: 40,
+                name: "Whey Concentrado 750g Growth Supplements - Variados Sabores",
+                category: "Esportes",
+                officialStore: "Loja Oficial Growth Supplements",
+                link: "https://meli.la/2EwjifM",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_883949-MLB117143339965_092026-F-whey-concentrado-750g-growth-supplements--variados-sabores.webp",
+                badge: "Whey Concentrado"
+            }
+        ];
+
+        // ESTADO DA APLICAÇÃO
+        let activeCategory = 'todos';
+        let searchQuery = '';
+
+        // CATEGORIAS DISPONÍVEIS
+        const categories = [
+            { id: 'todos', label: 'Todos os Produtos', icon: 'fa-border-all' },
+            { id: 'Apple', label: 'Apple', icon: 'fa-apple' },
+            { id: 'Smartphones', label: 'Smartphones', icon: 'fa-mobile-screen-button' },
+            { id: 'Informática', label: 'Informática & Laptops', icon: 'fa-laptop' },
+            { id: 'Giftcards', label: 'Giftcards', icon: 'fa-gift' },
+            { id: 'Esportes', label: 'Academia & Treino', icon: 'fa-dumbbell' },
+            { id: 'Acessórios', label: 'Acessórios', icon: 'fa-plug' },
+            { id: 'Eletrodomésticos', label: 'Eletrodomésticos', icon: 'fa-blender' },
+            { id: 'Eletrônicos', label: 'Eletrônicos & TVs', icon: 'fa-tv' },
+            { id: 'Automotivo', label: 'Automotivo', icon: 'fa-car' },
+            { id: 'Ferramentas', label: 'Ferramentas', icon: 'fa-screws-tilting' },
+            { id: 'Cuidados', label: 'Cuidados Pessoais', icon: 'fa-user-nurse' }
+        ];
+
+        /* ==========================================================================
+            RENDERIZAÇÃO DA NAVEGAÇÃO DE CATEGORIAS
+            ========================================================================== */
+        function renderCategoriesNav() {
+            const container = document.getElementById('categoriesNav');
+            container.innerHTML = categories.map(cat => {
+                const isActive = activeCategory === cat.id;
+                return `
+                    <button onclick="filterCategory('${cat.id}')" 
+                        class="px-4 py-1.5 rounded-full transition duration-200 flex items-center gap-2 ${
+                            isActive 
+                            ? 'bg-white text-black font-semibold shadow-md' 
+                            : 'text-zinc-400 hover:text-white hover:bg-zinc-900 border border-transparent hover:border-zinc-800'
+                        }">
+                        <i class="fa-solid ${cat.icon} text-xs"></i>
+                        <span>${cat.label}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        /* ==========================================================================
+            RENDERIZAÇÃO DOS CARDS DE PRODUTOS
+            ========================================================================== */
+        function renderProducts(items) {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const countLabel = document.getElementById('productCount');
+
+            countLabel.innerText = `Exibindo ${items.length} oferta(s)`;
+
+            if (items.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            grid.innerHTML = items.map(product => `
+                <div class="group bg-apple-card hover:bg-apple-cardHover border border-zinc-800/80 hover:border-zinc-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-apple-blue/5 relative">
+                    
+                    <div>
+                        <!-- Badge Topo & Selo Oficial ML -->
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[10px] font-semibold uppercase tracking-wider text-apple-blue bg-apple-blue/10 px-2.5 py-1 rounded-full border border-apple-blue/20">
+                                ${product.badge}
+                            </span>
+                            
+                            <div class="inline-flex items-center gap-1 text-[11px] font-medium text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded border border-yellow-400/20" title="Garantia de Compra no ML">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i>
+                                <span>Loja Oficial</span>
+                            </div>
+                        </div>
+
+                        <!-- Imagem do Produto com Fallback -->
+                        <div class="relative w-full aspect-square bg-zinc-900/50 rounded-xl mb-4 overflow-hidden flex items-center justify-center p-4 group-hover:scale-105 transition-transform duration-300">
+                            <img src="${product.image}" 
+                                   alt="${product.name}" 
+                                   loading="lazy"
+                                   decoding="async"
+                                   class="max-h-full max-w-full object-contain"
+                                   onerror="this.onerror=null; this.src='https://placehold.co/600x600/161617/FFFFFF?text=Produto+Oficial';">
+                        </div>
+
+                        <!-- Loja Vendedora Oficial -->
+                        <div class="text-[11px] text-zinc-400 flex items-center gap-1.5 mb-1.5 font-medium">
+                            <i class="fa-solid fa-store text-apple-blue"></i>
+                            <span>${product.officialStore}</span>
+                        </div>
+
+                        <!-- Nome do Produto -->
+                        <h3 class="font-semibold text-white text-base leading-snug tracking-tight mb-2 line-clamp-2 group-hover:text-apple-blue transition-colors">
+                            ${product.name}
+                        </h3>
+                    </div>
+
+                    <!-- Bloco de Ação (Sem Preço) -->
+                    <div class="mt-4 pt-3 border-t border-zinc-800/60">
+                        <a href="${product.link}" target="_blank" rel="noopener noreferrer"
+                            class="w-full bg-apple-blue hover:bg-apple-blueHover text-white font-medium text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-apple-blue/20 transition-all duration-200">
+                            <span>Comprar na Loja Oficial</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] text-zinc-500 flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-shield-cat text-zinc-400"></i> No Mercado Livre
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            `).join('');
+        }
+
+        /* ==========================================================================
+            FILTROS E BUSCA
+            ========================================================================== */
+        function filterCategory(catId) {
+            activeCategory = catId;
+            renderCategoriesNav();
+            
+            const titleEl = document.getElementById('currentCategoryTitle');
+            const foundCat = categories.find(c => c.id === catId);
+            titleEl.innerText = foundCat ? foundCat.label : 'Produtos';
+
+            applyFilters();
+        }
+
+        function handleSearch() {
+            searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+            document.getElementById('searchInputMobile').value = searchQuery;
+            applyFilters();
+        }
+
+        function handleSearchMobile() {
+            searchQuery = document.getElementById('searchInputMobile').value.toLowerCase().trim();
+            document.getElementById('searchInput').value = searchQuery;
+            applyFilters();
+        }
+
+        function resetFilters() {
+            searchQuery = '';
+            activeCategory = 'todos';
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchInputMobile').value = '';
+            renderCategoriesNav();
+            document.getElementById('currentCategoryTitle').innerText = 'Todos os Produtos';
+            applyFilters();
+        }
+
+        function applyFilters() {
+            let filtered = productsData.filter(product => {
+                const matchesCategory = activeCategory === 'todos' || product.category === activeCategory;
+                const matchesSearch = product.name.toLowerCase().includes(searchQuery) ||
+                                      product.officialStore.toLowerCase().includes(searchQuery) ||
+                                      product.category.toLowerCase().includes(searchQuery);
+
+                return matchesCategory && matchesSearch;
+            });
+
+            renderProducts(filtered);
+        }
+
+        /* ==========================================================================
+            MODAL LEGAL DE AFILIADO
+            ========================================================================== */
+        function acceptLegalNotice() {
+            localStorage.setItem('cassio_winkler_legal_accepted', 'true');
+            document.getElementById('legalModal').classList.add('hidden');
+        }
+
+        function openLegalModal() {
+            document.getElementById('legalModal').classList.remove('hidden');
+        }
+
+        // INICIALIZAÇÃO DA PÁGINA
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategoriesNav();
+            renderProducts(productsData);
+
+            // Verifica se o usuário já aceitou o termo de aviso legal
+            const isAccepted = localStorage.getItem('cassio_winkler_legal_accepted');
+            if (isAccepted === 'true') {
+                document.getElementById('legalModal').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
