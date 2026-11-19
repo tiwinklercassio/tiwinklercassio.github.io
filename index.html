@@ -1,360 +1,268 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <!-- =====================================
-       CONFIGURAÇÕES PRINCIPAIS
-  ====================================== -->
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#101820" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="author" content="Cássio Winkler" />
+  <meta name="description" content="Entre em contato com Cássio Winkler diretamente pelo WhatsApp. Atendimento rápido e direto."/>
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Cássio Winkler | Contato pelo WhatsApp</title>
+  <link rel="canonical" href="https://SEU-USUARIO.github.io/cassio-winkler/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cássio Winkler | Contato" />
+  <meta property="og:description" content="Entre em contato diretamente com Cássio Winkler pelo WhatsApp." />
+  <meta property="og:url" content="https://SEU-USUARIO.github.io/cassio-winkler/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cássio Winkler | Contato" />
+  <meta name="twitter:description" content="Fale diretamente pelo WhatsApp." />
+  <style>
+   :root {
+    color-scheme: dark;
+    --background: #101820;
+    --surface: #192832;
+    --green: #25d366;
+    --green-hover: #20bd5b;
+    --white: #ffffff;
+    --muted: #b9c7ce;
+   }
 
-        <meta charset="UTF-8" />
+   *,
+   *::before,
+   *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+   html {
+    min-height: 100%;
+    background: var(--background);
+    scroll-behavior: smooth;
+   }
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   body {
+    min-height: 100vh;
+    min-height: 100svh;
 
-        <meta name="theme-color" content="#101820" />
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        <meta name="color-scheme" content="dark" />
+    padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+     max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
 
-        <meta name="author" content="Cássio Winkler" />
+    font-family: Arial, Helvetica, sans-serif;
 
-        <meta
-            name="description"
-            content="Entre em contato com Cássio Winkler diretamente pelo WhatsApp. Atendimento rápido e direto."
-        />
+    color: var(--white);
 
-        <meta name="robots" content="index, follow, max-image-preview:large" />
+    background: radial-gradient(ellipse at 50% 35%, #203744 0%, #152631 45%, #101820 100%);
 
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+   }
 
-        <!-- =====================================
-       SEO
-  ====================================== -->
+   .container {
+    width: 100%;
+    max-width: 440px;
 
-        <title>Cássio Winkler | Contato pelo WhatsApp</title>
+    padding: 42px 28px;
 
-        <link rel="canonical" href="https://SEU-USUARIO.github.io/cassio-winkler/" />
+    text-align: center;
 
-        <!-- =====================================
-       OPEN GRAPH
-  ====================================== -->
+    background: var(--surface);
 
-        <meta property="og:type" content="website" />
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-        <meta property="og:title" content="Cássio Winkler | Contato" />
+    border-radius: 22px;
 
-        <meta property="og:description" content="Entre em contato diretamente com Cássio Winkler pelo WhatsApp." />
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+   }
 
-        <meta property="og:url" content="https://SEU-USUARIO.github.io/cassio-winkler/" />
+   .logo {
+    width: 66px;
+    height: 66px;
 
-        <meta property="og:locale" content="pt_BR" />
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        <!-- =====================================
-       TWITTER
-  ====================================== -->
+    margin: 0 auto 25px;
 
-        <meta name="twitter:card" content="summary" />
+    background: var(--green);
 
-        <meta name="twitter:title" content="Cássio Winkler | Contato" />
+    border-radius: 18px;
 
-        <meta name="twitter:description" content="Fale diretamente pelo WhatsApp." />
+    color: #073b20;
 
-        <!-- =====================================
-       CSS OTIMIZADO
-  ====================================== -->
+    font-size: 30px;
+    font-weight: 800;
+   }
 
-        <style>
-            :root {
-                color-scheme: dark;
-                --background: #101820;
-                --surface: #192832;
-                --green: #25d366;
-                --green-hover: #20bd5b;
-                --white: #ffffff;
-                --muted: #b9c7ce;
-            }
+   h1 {
+    margin-bottom: 13px;
 
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
+    font-size: clamp(25px, 6vw, 32px);
 
-            html {
-                min-height: 100%;
-                background: var(--background);
-                scroll-behavior: smooth;
-            }
+    font-weight: 700;
 
-            body {
-                min-height: 100vh;
-                min-height: 100svh;
+    letter-spacing: -0.8px;
+   }
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+   .description {
+    max-width: 340px;
 
-                padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
-                    max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+    margin: 0 auto 27px;
 
-                font-family: Arial, Helvetica, sans-serif;
+    color: var(--muted);
 
-                color: var(--white);
+    font-size: 15px;
 
-                background: radial-gradient(ellipse at 50% 35%, #203744 0%, #152631 45%, #101820 100%);
+    line-height: 1.7;
+   }
 
-                -webkit-font-smoothing: antialiased;
-                text-rendering: optimizeLegibility;
-            }
+   .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            .container {
-                width: 100%;
-                max-width: 440px;
+    gap: 10px;
 
-                padding: 42px 28px;
+    margin-bottom: 26px;
 
-                text-align: center;
+    color: #d8e5e9;
 
-                background: var(--surface);
+    font-size: 13px;
+   }
 
-                border: 1px solid rgba(255, 255, 255, 0.08);
+   .dot {
+    width: 9px;
+    height: 9px;
 
-                border-radius: 22px;
+    flex-shrink: 0;
 
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
-            }
+    border-radius: 50%;
 
-            .logo {
-                width: 66px;
-                height: 66px;
+    background: var(--green);
+   }
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+   .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-                margin: 0 auto 25px;
+    width: 100%;
+    min-height: 54px;
 
-                background: var(--green);
+    padding: 16px 20px;
 
-                border-radius: 18px;
+    background: var(--green);
 
-                color: #073b20;
+    border-radius: 12px;
 
-                font-size: 30px;
-                font-weight: 800;
-            }
+    color: #073b20;
 
-            h1 {
-                margin-bottom: 13px;
+    text-decoration: none;
 
-                font-size: clamp(25px, 6vw, 32px);
+    font-size: 14px;
+    font-weight: 800;
 
-                font-weight: 700;
+    letter-spacing: 0.3px;
 
-                letter-spacing: -0.8px;
-            }
+    transition:
+     background 0.2s ease,
+     transform 0.2s ease;
+   }
 
-            .description {
-                max-width: 340px;
+   .button:hover {
+    background: var(--green-hover);
+    transform: translateY(-1px);
+   }
 
-                margin: 0 auto 27px;
+   .button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+   }
 
-                color: var(--muted);
+   .footer {
+    margin-top: 28px;
 
-                font-size: 15px;
+    color: #8799a2;
 
-                line-height: 1.7;
-            }
+    font-size: 11px;
 
-            .status {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+    line-height: 1.6;
+   }
 
-                gap: 10px;
+   .noscript {
+    margin-top: 18px;
 
-                margin-bottom: 26px;
+    color: var(--muted);
 
-                color: #d8e5e9;
+    font-size: 12px;
 
-                font-size: 13px;
-            }
+    line-height: 1.6;
+   }
 
-            .dot {
-                width: 9px;
-                height: 9px;
+   @media (max-width: 380px) {
+    .container {
+     padding: 34px 20px;
+    }
 
-                flex-shrink: 0;
+    h1 {
+     font-size: 26px;
+    }
+   }
 
-                border-radius: 50%;
+   @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+     scroll-behavior: auto !important;
+     transition: none !important;
+    }
+   }
+  </style>
+ </head>
 
-                background: var(--green);
-            }
+ <body>
+  <main class="container">
+   <div class="logo" aria-hidden="true">C</div>
+   <h1>Cássio Winkler</h1>
+   <p class="description">Você está sendo direcionado para uma conversa diretamente pelo WhatsApp.</p>
+   <div class="status" role="status" aria-live="polite">
+    <span class="dot" aria-hidden="true"></span>
+    Preparando seu atendimento...
+   </div>
+   <a id="whatsapp" class="button" href="https://wa.me/" rel="noopener noreferrer"> CONTINUAR PARA O WHATSAPP </a>
+   <noscript>
+    <p class="noscript">Para continuar automaticamente, habilite o JavaScript ou utilize o botão de contato.</p>
+   </noscript>
 
-            .button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+   <footer class="footer">
+    © <span id="year">2026</span>
+    Cássio Winkler. Todos os direitos reservados.
+   </footer>
+  </main>
 
-                width: 100%;
-                min-height: 54px;
-
-                padding: 16px 20px;
-
-                background: var(--green);
-
-                border-radius: 12px;
-
-                color: #073b20;
-
-                text-decoration: none;
-
-                font-size: 14px;
-                font-weight: 800;
-
-                letter-spacing: 0.3px;
-
-                transition:
-                    background 0.2s ease,
-                    transform 0.2s ease;
-            }
-
-            .button:hover {
-                background: var(--green-hover);
-                transform: translateY(-1px);
-            }
-
-            .button:focus-visible {
-                outline: 3px solid #ffffff;
-                outline-offset: 4px;
-            }
-
-            .footer {
-                margin-top: 28px;
-
-                color: #8799a2;
-
-                font-size: 11px;
-
-                line-height: 1.6;
-            }
-
-            .noscript {
-                margin-top: 18px;
-
-                color: var(--muted);
-
-                font-size: 12px;
-
-                line-height: 1.6;
-            }
-
-            @media (max-width: 380px) {
-                .container {
-                    padding: 34px 20px;
-                }
-
-                h1 {
-                    font-size: 26px;
-                }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                *,
-                *::before,
-                *::after {
-                    scroll-behavior: auto !important;
-                    transition: none !important;
-                }
-            }
-        </style>
-    </head>
-
-    <body>
-        <main class="container">
-            <div class="logo" aria-hidden="true">C</div>
-
-            <h1>Cássio Winkler</h1>
-
-            <p class="description">Você está sendo direcionado para uma conversa diretamente pelo WhatsApp.</p>
-
-            <div class="status" role="status" aria-live="polite">
-                <span class="dot" aria-hidden="true"></span>
-
-                Preparando seu atendimento...
-            </div>
-
-            <a id="whatsapp" class="button" href="https://wa.me/" rel="noopener noreferrer">
-                CONTINUAR PARA O WHATSAPP
-            </a>
-
-            <noscript>
-                <p class="noscript">
-                    Para continuar automaticamente, habilite o JavaScript ou utilize o botão de contato.
-                </p>
-            </noscript>
-
-            <footer class="footer">
-                © <span id="year">2026</span>
-                Cássio Winkler. Todos os direitos reservados.
-            </footer>
-        </main>
-
-        <!-- =====================================
-       REDIRECIONAMENTO
-  ====================================== -->
-
-        <script>
-            (() => {
-                "use strict";
-
-                /*
-                 * Telefone fragmentado.
-                 * Ofuscação básica, não criptografia.
-                 */
-
-                const fragments = [53, 53, 52, 50, 57, 57, 57, 56, 51, 53, 52, 57, 55];
-
-                const phone = String.fromCharCode(...fragments);
-
-                /*
-                 * Mensagem personalizada.
-                 */
-
-                const message = [
-                    "Olá Cássio, tudo bem?",
-                    "Sou [Informe seu Nome], e gostaria de falar contigo [...]",
-                ].join("\n");
-
-                /*
-                 * Montagem do endereço WhatsApp.
-                 */
-
-                const whatsappURL = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-
-                /*
-                 * Atualiza o botão.
-                 */
-
-                const button = document.getElementById("whatsapp");
-
-                button.href = whatsappURL;
-
-                /*
-                 * Atualiza o ano automaticamente.
-                 */
-
-                document.getElementById("year").textContent = new Date().getFullYear();
-
-                /*
-                 * Redirecionamento automático.
-                 */
-
-                window.setTimeout(() => {
-                    window.location.replace(whatsappURL);
-                }, 1000);
-            })();
-        </script>
-    </body>
+     <script>
+   (() => {
+    "use strict";
+    const fragments = [53, 53, 52, 50, 57, 57, 57, 56, 51, 53, 52, 57, 55];
+    const phone = String.fromCharCode(...fragments);
+    const message = ["Olá Cássio, tudo bem?", "Sou [Informe seu Nome], e gostaria de falar contigo [...]"].join("\n");
+    const whatsappURL = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    const button = document.getElementById("whatsapp");
+    button.href = whatsappURL;
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.setTimeout(() => {
+     window.location.replace(whatsappURL);
+    }, 1000);
+   })();
+  </script>
+ </body>
 </html>
